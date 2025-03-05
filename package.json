@@ -14,7 +14,7 @@
     "client:dev": "cd client && npm run dev",
     "build": "npm run client:build && npm run server:build",
     "seed": "cd server && npm run seed",
-    "render-build": "npm install && npm run build && npm run seed",
+    "render-build": "npm install && npm run build",
     "render-start": "npm run server:only",
     "cypress": "npx cypress open",
     "test": "npx cypress run"
