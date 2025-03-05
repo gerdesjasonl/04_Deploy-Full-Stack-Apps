@@ -2,8 +2,7 @@ import db from '../config/connection.js';
 import { Word } from '../models/index.js';
 import cleanDB from './cleanDB.js';
 
-import wordData from './wordSeeds.json' assert { type: 'json' };
-
+const wordData = (await import('./wordSeeds.json', { assert: { type: 'json' } })).default;
 try {
   await db();
   await cleanDB();
